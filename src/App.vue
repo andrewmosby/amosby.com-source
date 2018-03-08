@@ -151,6 +151,10 @@
 				content: "Close";
 			}
 		}
+
+		@media (max-width: $phoneMax) {
+			display: none;
+		}
 	}
 	.headerToggle_icon {
 		display: block;
@@ -176,6 +180,16 @@
 			+ h3 {
 				padding-top: $marginTopBottom*(1/2);
 			}
+		}
+
+		@media (max-width: $tabletMax) {
+			margin-top: 60px;
+			padding: 60px 32px;
+		}
+
+		@media (max-width: $phoneMax) {
+			margin-top: 32px;
+			padding: 32px 16px;
 		}
 	}
 </style>

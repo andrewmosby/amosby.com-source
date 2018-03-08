@@ -83,6 +83,7 @@
 		color: white;
 		transition: $transition;
 		overflow: hidden;
+	    z-index: 100;
 
 		&:hover {
 			width: 140px;
@@ -113,9 +114,6 @@
 			margin-top: 20px;
 		}
 	}
-	.header_nav_icon {
-
-	}
 	.header_nav_text {
 		display: none;
 	    padding-left: 8px;
@@ -140,5 +138,41 @@
 	.siteLogo_icon {
 		font-size: 40px;
 		margin-right: 12px;
+	}
+	@media (max-width: $phoneMax) {
+		.header {
+			height: auto;
+			width: 100%;
+			top: inherit;
+			bottom: 0;
+
+			&:hover {
+				width: 100%;
+			}
+		}
+		.header_nav {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.header_nav_link {
+			display: block;
+			text-align: center;
+
+			+ .header_nav_link {
+				margin-top: 0;
+				margin-left: 12px;
+			}
+			&:hover {
+				padding-left: 0;
+			}
+		}
+		.header_nav_icon {
+			display: block;
+		}
+		.header_nav_text {
+			display: block !important;
+			padding-left: 0;
+		}
 	}
 </style>

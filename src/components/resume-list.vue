@@ -69,6 +69,8 @@
 </script>
 
 <style scoped lang="scss">
+	@import "./../variables.scss";
+	
 	.resumeList_section {
 		position: relative;
 
@@ -91,6 +93,10 @@
 		top: -36px;
 		right: -36px;
 		cursor: pointer;
+
+		@media (max-width: $tabletMax) {
+			display: none;
+		}
 	}
 	@media print {
 		.resume_title {

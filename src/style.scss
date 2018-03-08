@@ -66,6 +66,11 @@ main {
 	padding: 0 0 0 56px; //header width
 	overflow: hidden;
 	color: $colorLightGray;
+
+	@media (max-width: $phoneMax) {
+		padding-left: 0;
+		padding-bottom: 76px;
+	}
 }
 
 .videoWrapper {
