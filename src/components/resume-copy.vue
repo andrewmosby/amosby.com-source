@@ -1,18 +1,18 @@
 <template>
 	<div>
 		<h2>Design-oriented, team-focued Front End Developer</h2>
-		<h3>A Helluva non-Engineer</h3>
+		<h3>A Helluva Engineer</h3>
 		<p>Growing up, I was always very math and science focused in school, but extra-curricularly interested in music and art. So, going to Georgia Tech seemed the obvious choice for an in-state math nerd, but I knew that I did not want to major in any form of traditional engineering. After first-year core classes and some soul searching, I landed on a major in Industrial Design. It seemed the perfect choice&mdash;a degree in product design that would require pragmatism and problem solving as well as a bucket of Prismacolor markers and archival pens. I spent countless hours in design studio, learning the ins and outs of freehand sketching, line art, graphic design and the Adobe Suite, 3D computer modeling, and iterative physical modeling. Meanwhile, I was taking classes about manufacturing, contracts, and sustainable design. All the while, I get a kick out of telling people that I go to Georgia Tech, but I'm not an engineer&mdash;not realizing that <em>I'm much more of an engineer than I think.</em></p>
 		<p>Outside of the classroom, I worked as a Resident Advisor in freshman housing and was involved in the freshman orientation program, both of which allowed me to gain experience in building up leaders based on their own interests.</p>
-		<img src="https://picsum.photos/720/480?image=1044">
-		<!-- <ul>
+		<!-- <img src="https://picsum.photos/720/480?image=1044">
+		<ul>
 			<li><strong>Throw in some portfolio shots</strong></li>
 		</ul> -->
 
 		<h3>Chile ......</h3>
 		<p>The same passion for working with younger college students transitioned me to working on a team of like-minded recent grads all interested in college ministry. We worked for a year fund raising, then arrived in Santiago, Chile to fill in for the current team that was transitioning off the field. Not surprisingly, though, I couldn't leave my design roots. In an effort to better communicate to increasingly digitally-minded students, I was tasked with a full reboot of the ministry's brand and marketing materials.</p>
-		<img src="https://picsum.photos/720/480?image=1044">
-		<!-- <ul>
+		<!-- <img src="https://picsum.photos/720/480?image=1044">
+		<ul>
 			<li><strong>EO brand pieces</strong></li>
 		</ul> -->
 		<p>My strength as a designer, minister, and friend flowed from my team&mdash;we were a very united and clearly focused team that enjoyed working together almost as much as we enjoyed being together outside of work. Our brainstorming sessions were productive, we learned how to maximize our meeting times (which decreased meeting frequency), and each member really pulled their weight. And yes, there was conflict, but we tried to head that off as often as possible through open and honest communication and bi-monthly "knees-to-knees" sessions designed to allow time to be open about interpersonal encouragement or struggle.</p>

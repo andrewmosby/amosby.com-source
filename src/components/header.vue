@@ -103,6 +103,7 @@
 		font-size: 13px;
 		align-items: center;
 		transition: $transition;
+		user-select: none;
 
 		&:hover {
 			padding-left: 8px;

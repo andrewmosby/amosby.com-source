@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<img class="banner"  v-bind:src="bannerImg">
+		<!-- Until I find an image <img class="banner"  v-bind:src="bannerImg"> -->
 		<div class="padding background-darkGray">
 			<div class="textAlign-center">
 				<h1>Hi, I'm Andrew Mosby.</h1>

@@ -282,6 +282,7 @@
 		text-transform: capitalize;
 		cursor: pointer;
 		transition: $transition;
+		user-select: none;
 
 		&:hover {
 			background-color: rgba(255,255,255,.05);
