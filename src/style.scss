@@ -1,0 +1,1180 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+/*#region RESET */
+
+/* Apply box sizing to everything */
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+	box-sizing: border-box;
+}
+
+*:before, *:after {
+	box-sizing: border-box;
+}
+
+
+/* Resetting HTML to 16px font size. 16px == 1rem. Don't change me. */
+html {
+	font-size: 16px;
+}
+
+/* Resetting fonts of these elements to allow them to inherit our body styles by default */
+input, button, select, textarea {
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+
+i, cite, em, var, address, dfn {
+	font-style: italic;
+}
+
+/*#endregion */
+
+/*#region BASE DEFINITIONS */
+html, body {
+	width: 100%;
+	max-width: 100%; /* note: include for ipad bug */
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: $bodyBg;
+	color: $colorTextBase;
+	font-size: $fontSizeBase;
+	font-family: $fontPrimary;
+	line-height: $lineHeightBase;
+}
+
+::selection {
+	background: $colorLightGray;
+	color: $colorBlack;
+}
+
+img, video, object, figure {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+
+main {
+	background: $mainBg;
+	width: 100%;
+	padding: 0 0 0 56px; //header width
+	overflow: hidden;
+	color: $colorLightGray;
+}
+
+.videoWrapper {
+	position: relative;
+	height: 0;
+	padding-bottom: 50%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.absolute {
+	position: absolute;
+}
+
+.absolute-top {
+	top: 0;
+}
+
+.absolute-right {
+	right: 0;
+}
+
+.absolute-bottom {
+	bottom: 0;
+}
+
+.absolute-left {
+	left: 0;
+}
+
+.relative {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}
+
+/*#endregion */
+
+
+/*#region BUTTONS */
+
+
+// Base Button Styles
+$buttonFontWeight: 400;
+$buttonFontFamily: $fontPrimary;
+$buttonFontSize: 14px;
+
+$buttonColorText: $colorLightGray;
+$buttonColorTextHover: lighten($colorBeige, 10%);
+
+$buttonColorBG: transparent;
+$buttonColorBGHover: transparent;
+
+$buttonBorderSize: 3px;
+$buttonBorderColor: $colorBeige;
+$buttonBorderRadius: 0;
+
+
+// Sizing
+$buttonPadding: 12px 30px;
+$buttonMinWidth: initial;
+
+.button, button, [type="button"], [type="submit"] {
+	display: inline-block;
+	min-width: $buttonMinWidth;
+	margin-bottom: 0;
+	padding: $buttonPadding;
+	border: $buttonBorderSize solid $buttonBorderColor;
+	border-radius: $buttonBorderRadius;
+	background: $buttonColorBG;
+	color: $buttonColorText;
+	font-weight: $buttonFontWeight;
+	font-size: $buttonFontSize;
+	font-family: $buttonFontFamily;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1;
+	touch-action: manipulation;
+	cursor: pointer;
+	appearance: none;
+	transition: all .25s ease 0s;
+
+	&:hover, &:focus {
+		background: $buttonColorBGHover;
+		border-color: $buttonColorTextHover;
+		//color: $buttonColorTextHover;
+		text-decoration: none;
+	}
+
+	&:disabled {
+		opacity: .3;
+		pointer-events: none;
+	}
+}
+
+.button-blueBackground {
+	background: $colorBlue;
+	color: white;
+	
+	&:hover {
+		
+	}
+}
+
+.button-yellowBackground {
+	background: $colorYellow;
+	color: $colorBlack;
+	
+	&:hover {
+		background: white;
+		color: $colorBlack;
+	}
+}
+
+/*#endregion */
+
+
+/*#region COLORS */
+
+// background styles 
+.background-white {
+	background: $colorWhite;
+	color: $colorBlack;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorGray;
+	}
+
+	a {
+		color: $colorBlack;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+.background-lightGray {
+	background: $colorLightGray;
+	color: $colorBlack;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorBlack;
+	}
+
+	a {
+		color: $colorBlack;
+	}
+}
+
+.background-gray {
+	background: $colorGray;
+	color: $colorBlack;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorBlack;
+	}
+
+	a {
+		color: $colorBlack;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+.background-darkGray {
+	background: $colorDarkGray;
+	color: $colorLightGray;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorLightGray;
+	}
+
+	a {
+		color: $colorBeige;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+.background-black {
+	background: $colorBlack;
+	color: $colorLightGray;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorLightGray;
+	}
+
+	a:not(.button) {
+		color: $colorBeige;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+.background-yellow {
+	background: $colorYellow;
+	color: $colorBlack;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorBlack;
+	}
+
+	a {
+		color: $colorBlack;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+.background-blue {
+	background: $colorBlue;
+	color: $colorWhite;
+
+	h1, h2, .h1, .h2, h3, .h3, h4, .h4 {
+		color: $colorWhite;
+	}
+
+	a:not(.button) {
+		color: $colorWhite;
+
+		&:hover, &:focus {
+			color: $colorAction;
+		}
+	}
+}
+
+// text color styles 
+.color-white {
+	color: $colorWhite !important;
+}
+
+.color-black {
+	color: $colorBlack !important;
+}
+
+/*#endregion */
+
+
+/*#region FORMS */
+
+$placeholderTextColor: $colorGray;
+$checkRadioSize: 20px;
+$errorColor: red;
+
+$fieldsetMaxWidth: 680px;
+
+$labelMarginBottom: 6px;
+
+$inputHeight: 30px;
+$inputPadding: 0 10px;
+$inputMargin: 0 0 $marginTopBottom;
+
+$submitButtonMargin: 60px;
+
+label {
+	display: block;
+	margin: 0 0 $labelMarginBottom;
+	color: $colorGray;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+fieldset {
+	max-width: $fieldsetMaxWidth;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}
+
+[type="text"], [type="password"], [type="email"], [type="search"], [type="url"], [type="number"], [type="tel"], textarea, select {
+	width: 100%;
+	min-height: $inputHeight;
+	margin: $inputMargin;
+	padding: $inputPadding;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	font-family: $fontPrimary;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	/* Needed for iOS inputs. Had to remove appearance: none */
+	&:focus, &:hover {
+		outline: 2px solid #ccc;
+	}
+}
+
+textarea {
+	height: inherit;
+	padding-top: 8px;
+}
+
+select {
+	padding-right: 42px;
+	background: white url(/DimWeightSolutions/images/master/icon-arrow-down-black.png) no-repeat calc(100% - 10px) center;
+	background-size: 15px auto;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+input[type="search"] {
+	background: white url("/DimWeightSolutions/images/master/icon-search-dark.png") no-repeat;
+	background-position: calc(100% - 10px) center;
+	background-size: 15px auto;
+}
+
+input[type="email"] {
+	background-image: url("/DimWeightSolutions/images/master/icon-email-white.png");
+	background-repeat: no-repeat;
+	background-position: calc(100% - 10px) center;
+	background-size: 15px auto;
+}
+
+::-webkit-input-placeholder {
+	color: $placeholderTextColor;
+}
+
+::-moz-placeholder {
+	color: $placeholderTextColor;
+}
+
+:-ms-input-placeholder {
+	color: $placeholderTextColor;
+}
+
+/* *
+  * $styles forms1 Checkboxes, Radio Buttons
+  *
+  * $demo demos/forms-checkboxRadio.html
+  * */
+
+[type="checkbox"], [type="radio"] {
+	width: $checkRadioSize;
+	height: $checkRadioSize;
+	margin-right: 5px;
+	padding: 0;
+	border: 1px solid #ccc;
+	outline: none;
+	background: white no-repeat;
+	background-size: 18px auto;
+	background-position: top center;
+	vertical-align: middle;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	&:checked {
+		background-position: bottom center;
+	}
+}
+
+[type="checkbox"] {
+}
+
+[type="radio"] {
+	border-radius: $checkRadioSize / 2;
+}
+
+.radioWrapper {
+	display: flex;
+	align-items: flex-start;
+	@media (max-width: $phoneMax) {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+.formFooter {
+	padding-top: 10px;
+}
+
+.submitWrapper {
+	padding-top: $submitButtonMargin;
+	@media (max-width: $phoneMax) {
+		padding-top: 25px;
+	}
+}
+
+.inputWrapper-small {
+	max-width: 80px;
+}
+
+.inputWrapper-medium {
+	max-width: 160px;
+}
+
+/*#endregion */
+
+/*#region ICONS */
+
+.icon-social {
+	$size: 40px;
+	$padding: 8px;
+	display: inline-block;
+	width: $size;
+	height: $size;
+	padding: $padding;
+	background: transparent	;
+
+	svg {
+		width: $size - ($padding*2);
+		height: $size - ($padding*2);		
+	}
+}
+
+.icon-social-codepen, .icon-social-twitter {
+	&:hover {
+		color: white;
+	}
+}
+
+.icon-social-codepen:hover {
+	$brand: #000;
+	background-color: $brand;
+}
+
+.icon-social-twitter:hover {
+	$brand: #54aced;
+	background-color: $brand;
+}
+
+/*#endregion */
+
+
+/*#region LAYOUT */
+
+// These rule variables are defined in variables.less. 
+// This file should not be edited. 
+
+.padding {
+	max-width: 100%;
+	padding: $paddingTopBottom $paddingLeftRight;
+}
+
+.padding-top {
+	padding-top: $paddingTopBottom;
+}
+
+.padding-bottom {
+	padding-bottom: $paddingTopBottom;
+}
+
+.padding-right {
+	padding-right: $paddingLeftRight;
+}
+
+.padding-left {
+	padding-left: $paddingLeftRight;
+}
+
+.padding-topBottom {
+	padding-top: $paddingTopBottom;
+	padding-bottom: $paddingTopBottom;
+}
+
+.padding-leftRight {
+	padding-right: $paddingLeftRight;
+	padding-left: $paddingLeftRight;
+}
+
+.padding-remove {
+	padding: 0;
+}
+
+.padding-remove-top {
+	padding-top: 0;
+}
+
+.padding-remove-right {
+	padding-right: 0;
+}
+
+.padding-remove-bottom {
+	padding-bottom: 0;
+}
+
+.padding-remove-left {
+	padding-left: 0;
+}
+
+.margin-remove {
+	margin: 0;
+}
+
+.margin-remove-top {
+	margin-top: 0;
+}
+
+.margin-remove-right {
+	margin-right: 0;
+}
+
+.margin-remove-bottom {
+	margin-bottom: 0;
+}
+
+.margin-remove-left {
+	margin-left: 0;
+}
+
+.column-centered {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.column-small {
+	max-width: 880px;
+}
+
+.column-medium {
+	max-width: 1200px;
+}
+
+.column-large {
+	max-width: 1400px;
+}
+
+@media (max-width: $tabletMax) {
+	.padding-mobile {
+		padding: $paddingTopBottomTablet $paddingLeftRightTablet;
+	}
+
+	.padding-remove-mobile {
+		padding: 0 !important;
+	}
+
+	.padding-remove-top-mobile {
+		padding-top: 0 !important;
+	}
+
+	.padding-remove-right-mobile {
+		padding-right: 0 !important;
+	}
+
+	.padding-remove-bottom-mobile {
+		padding-bottom: 0 !important;
+	}
+
+	.padding-remove-left-mobile {
+		padding-left: 0 !important;
+	}
+}
+
+@media (min-width: $tabletMin) and (max-width: $tabletMax) {
+	.padding {
+		padding: $paddingTopBottomTablet $paddingLeftRightTablet;
+	}
+
+	.padding-top {
+		padding-top: $paddingTopBottomTablet;
+	}
+
+	.padding-bottom {
+		padding-bottom: $paddingTopBottomTablet;
+	}
+
+	.padding-right {
+		padding-right: $paddingLeftRightTablet;
+	}
+
+	.padding-left {
+		padding-left: $paddingLeftRightTablet;
+	}
+
+	.padding-topBottom {
+		padding-top: $paddingTopBottomTablet;
+		padding-bottom: $paddingTopBottomTablet;
+	}
+
+	.padding-leftRight {
+		padding-right: $paddingLeftRightTablet;
+		padding-left: $paddingLeftRightTablet;
+	}
+
+	.padding-remove-tablet {
+		padding: 0;
+	}
+
+	.padding-remove-top-tablet {
+		padding-top: 0;
+	}
+
+	.padding-remove-right-tablet {
+		padding-right: 0;
+	}
+
+	.padding-remove-bottom-tablet {
+		padding-bottom: 0;
+	}
+
+	.padding-remove-left-tablet {
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: $phoneMax) {
+	.padding {
+		padding: $paddingTopBottomPhone $paddingLeftRightPhone;
+	}
+
+	.padding-top {
+		padding-top: $paddingTopBottomPhone;
+	}
+
+	.padding-bottom {
+		padding-bottom: $paddingTopBottomPhone;
+	}
+
+	.padding-topBottom {
+		padding-top: $paddingTopBottomPhone;
+		padding-bottom: $paddingTopBottomPhone;
+	}
+
+	.padding-leftRight {
+		padding-right: $paddingLeftRightPhone;
+		padding-left: $paddingLeftRightPhone;
+	}
+
+	.padding-mobile {
+		padding: $paddingTopBottomPhone $paddingLeftRightPhone;
+	}
+
+	.padding-remove-phone {
+		padding: 0;
+	}
+
+	.padding-remove-top-phone {
+		padding-top: 0;
+	}
+
+	.padding-remove-right-phone {
+		padding-right: 0;
+	}
+
+	.padding-remove-bottom-phone {
+		padding-bottom: 0;
+	}
+
+	.padding-remove-left-phone {
+		padding-left: 0;
+	}
+}
+
+/*#endregion */
+
+
+/*#region LISTS */
+
+$listGapSize: 20px;
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li + li {
+	margin-top: $marginTopBottom/2;
+}
+
+.list-desktopTwoColumn, .list-desktopThreeColumn, .list-desktopFourColumn, .list-tabletTwoColumn, .list-tabletThreeColumn, .list-tabletFourColumn, .list-phoneTwoColumn, .list-phoneThreeColumn, .list-phoneFourColumn {
+	column-gap: $listGapSize;
+
+	> * {
+		break-inside: avoid-column;
+	}
+	li {
+		margin-bottom: 8px;
+		padding-left: 12px;
+		background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/249772/list-bullet.png) no-repeat left 9px;
+		background-size: 4px auto;
+	}
+}
+
+@media (min-width: $desktopMin) {
+	.list-desktopTwoColumn {
+		column-count: 2;
+	}
+
+	.list-desktopThreeColumn {
+		column-count: 3;
+	}
+
+	.list-desktopFourColumn {
+		column-count: 4;
+	}
+}
+
+@media (min-width: $tabletMin) and (max-width: $tabletMax) {
+	.list-tabletTwoColumn {
+		column-count: 2;
+	}
+
+	.list-tabletThreeColumn {
+		column-count: 3;
+	}
+
+	.list-tabletFourColumn {
+		column-count: 4;
+	}
+}
+
+@media only screen and (max-width: $phoneMax) {
+	.list-phoneTwoColumn {
+		column-count: 2;
+	}
+
+	.list-phoneThreeColumn {
+		column-count: 3;
+	}
+
+	.list-phoneFourColumn {
+		column-count: 4;
+	}
+}
+
+/*#endregion */
+
+
+/*#region TABLES */
+
+$alternatingBackgroundColor: $colorWhite;
+
+table {
+	width: 100%;
+	background-color: $tableBg;
+
+	thead {
+		color: $colorBlack;
+
+		tr {
+			background-color: $colorYellow;
+		}
+	}
+
+	td, th {
+		padding: 8px 14px;
+		font-size: 0.9rem;
+		text-align: left;
+	}
+
+	th {
+		text-transform: uppercase;
+	}
+
+	a {
+		font-weight: 700;
+	}
+
+	tbody tr:nth-of-type(even) {
+		background: $alternatingBackgroundColor;
+	}
+	@media (max-width: $phoneMax) {
+		thead {
+			display: none;
+		}
+
+		tr {
+			display: block;
+			padding: 10px 0;
+		}
+
+		td {
+			display: table;
+			width: 100%;
+		}
+
+		td:before {
+			padding-right: 10px;
+			font-weight: 700;
+			text-align: right;
+			content: attr(aria-label) ": ";
+		}
+
+		td:before, td a {
+			display: table-cell;
+			width: 50%;
+		}
+
+		tbody tr:nth-of-type(odd) {
+			background: darken($alternatingBackgroundColor, 5%);
+		}
+	}
+}
+
+/*#endregion */
+
+
+/*#region TYPE */
+
+// Most of this file is buit from variables.less 
+// Note that blockquote does not, due to its highly variable design 
+
+// Font Families 
+.font-primary {
+	font-family: $fontPrimary;
+}
+
+.font-secondary {
+	font-family: $fontSecondary;
+}
+
+
+// Font Weights 
+
+.fontWeight-regular {
+	font-weight: $fontRegular;
+}
+
+.fontWeight-strong, strong, b {
+	font-weight: $fontBold;
+}
+
+
+// Text Sizing 
+.fontSize-micro {
+	font-size: $fontMicro;
+}
+
+.fontSize-minor {
+	font-size: $fontMinor;
+}
+
+.fontSize-body {
+	font-size: $fontSizeBase;
+}
+
+.fontSize-major {
+	font-size: $fontMajor;
+}
+
+.fontSize-macro {
+	font-size: $fontMacro;
+}
+
+// Font Style 
+
+.fontStyle-italic {
+	font-style: italic;
+}
+
+
+// Text Casing 
+.textCase-caps {
+	text-transform: uppercase;
+}
+
+.textCase-nocaps {
+	text-transform: none;
+}
+
+
+// Text Align 
+.textAlign-left {
+	text-align: left;
+}
+
+.textAlign-right {
+	text-align: right;
+}
+
+.textAlign-center {
+	text-align: center;
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media (max-width: $tabletMax) {
+	.mobileTextAlign-left {
+		text-align: left;
+	}
+
+	.mobileTextAlign-right {
+		text-align: right;
+	}
+
+	.mobileTextAlign-center {
+		text-align: center;
+
+		h1, h2, h3, h4, h5, h6, p {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+
+
+// Headings 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	font-weight: 600;
+	font-family: $fontSecondary;
+}
+h1, .h1 {
+	margin: 0 0 16px;
+	line-height: 1.1;
+	@include responsiveText($tabletMax, $fontSizeH1, $fontSizeMobileH1);
+	
+	@media (max-width: $phoneMax) {
+		margin-bottom: 8px;
+	}
+}
+
+h1 a {
+    position: relative;
+    padding: 0 0.15em;
+	border-bottom: 0.15em solid $colorBlack;
+	text-decoration: none;
+    z-index: 1;
+	
+	&:hover {
+		border-color: inherit;
+		color: inherit;
+		text-decoration: none;
+	}
+}
+h1 a:after {
+    background: $colorYellow;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all ($transitionTiming/2) $transitionEasing $transitionDelay;
+}
+h1 a:hover:after {
+    height: 1.2em;
+}
+
+h2, .h2 {
+	@include responsiveText($tabletMax, $fontSizeH2, $fontSizeMobileH2);
+    line-height: 1.1;
+}
+
+h3, .h3 {
+	@include responsiveText($tabletMax, $fontSizeH3, $fontSizeMobileH3);
+}
+
+h4, .h4 {
+	@include responsiveText($tabletMax, $fontSizeH4, $fontSizeMobileH4);
+}
+
+// Type spacing 
+p, h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6, blockquote, address, ul {
+	margin: 0 0 $marginTopBottom;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+p, h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6, blockquote, hr, ul, .container-maxWidth {
+	max-width: $elementMaxWidth;
+}
+
+.text-extraWide {
+	max-width: 100%;
+}
+
+
+// Links (Standalone and nested in text elements) 
+a {
+	color: $linkColor;
+	text-decoration: $linkDecoration;
+	transition: all .25s ease 0s;
+	cursor: pointer;
+	
+	&:hover, &:focus {
+		color: $linkColorHover;
+		text-decoration: $linkHoverDecoration;
+	}
+}
+
+p, li {
+	a {
+		&:hover {
+		}
+	}
+}
+
+// Quotes 
+q {
+	quotes: "“" "”" "‘" "’";
+
+	&:before {
+		content: open-quote;
+	}
+
+	&:after {
+		content: close-quote;
+	}
+}
+
+blockquote {
+	p {
+		margin-bottom: 12px;
+		quotes: "“" "”" "‘" "’";
+
+		&:before {
+			content: open-quote;
+		}
+
+		&:after {
+			content: close-quote;
+		}
+	}
+
+	cite {
+		&:before {
+			content: "~ ";
+		}
+	}
+}
+
+
+// Minor Text Elements 
+sup {
+	top: -0.4em;
+	font-weight: normal;
+	font-size: 60%;
+}
+
+abbr {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+cite {
+	/* No Styles Yet */
+}
+
+address {
+	font-style: normal;
+	line-height: $lineHeightBase;
+}
+
+
+// Horizontal Reference 
+hr {
+	height: $hrHeight;
+	margin: $hrMarginTopBottom 0;
+	border: none;
+	background: $hrBackgroundColor;
+}
+
+// Special Text Styles 
+.dropCap:first-letter {
+	font-weight: $dropCapFontWeight;
+	font-size: $dropCapFontSize;
+	line-height: $dropCapLineHeight;
+}
+
+/*#endregion */
+
+
+/*#region PRINT */
+@page {
+	margin: 1cm;
+}
+@media print {
+	.padding {
+		padding: 0;
+	}
+	.printHide {
+		display: none !important;
+	}
+	// Set everything to black color. Remove backgrounds.
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	body {
+		font-size: 14px;
+	}
+	.header, .footer, main {
+		padding: 0;
+	}
+	li + li {
+		margin-top: 4px;
+	}
+	.contentEntry h3 {
+		margin-bottom: 0;
+	}
+}
+
+/*#endregion */

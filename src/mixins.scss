@@ -1,0 +1,14 @@
+/* Responsive Text */
+// Allows text to scale smoothly from one resolution down to another.
+@mixin responsiveText ($MaxResolution,$DesktopSize,$MobileSize) {
+	$MobileMediaSize: ((($MobileSize)/(($DesktopSize)/($MaxResolution/100)))*100);
+	font-size: $DesktopSize;
+
+	@media only screen and (max-width: $MaxResolution) {
+		font-size: (($DesktopSize)/($MaxResolution/100))*1vw;
+	}
+	
+	@media only screen and (max-width: $MobileMediaSize) {
+		font-size: $MobileSize;
+	}
+}

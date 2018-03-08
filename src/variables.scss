@@ -1,0 +1,134 @@
+/*
+* When possible use pixels for variables. They are the easiest understood for
+* users of photoshop and other such raster software & what Dev Tools
+* natively displays.
+*/
+
+/* Media Query Sizes (in pixels) */
+$phoneMax: 700px;
+$tabletMax: 1024px;
+$desktopMax: 1500px;
+
+$tabletMin: $phoneMax + 1px;
+$desktopMin: $tabletMax + 1px;
+$largeDesktopMin: $desktopMax + 1px;
+
+
+/* Base Colors */
+$colorWhite: #fff;
+$colorLightGray: #e4e4e4;
+$colorGray: #888;
+$colorDarkGray: #252A30;
+$colorBlack: #1c2127;
+$colorBeige: #B4A892;
+$colorYellow: #fed766;
+$colorBlue: #2c5ba9;
+$colorTextBase: $colorBlack;
+$colorAction: $colorYellow;
+
+
+/* Base Elements */
+$bodyBg: $colorDarkGray;
+$mainBg: $colorDarkGray; // This is often different from body background 
+$tableBg: $colorWhite;
+$linkColor: $colorBeige;
+$linkColorHover: lighten($colorBeige, 10%);
+
+$linkDecoration: underline;
+$linkHoverDecoration: underline;
+
+// Content Max-Width (p, headings, hr, blockquotes) 
+$elementMaxWidth: 720px;
+
+/* Fonts */
+// Generally the body copy
+$fontPrimary: "Roboto", sans-serif;
+// Generally the headings and callouts
+$fontSecondary: "Crimson Text", serif;
+
+/*
+* These are used in type.less within the responsive text mixin to generate
+* smooth font scaling naturally. If the project doesn't have H5, H6 etc,
+* these will stand in fine to give styles to possible content entry.
+*/
+
+// These are the desktop resolution.
+$fontSizeBase: 16px;
+$fontMicro: 10px;
+$fontMinor: 12px;
+$fontMajor: 24px;
+$fontMacro: 30px;
+
+
+$fontSizeH1: 40px;
+$fontSizeH2: 32px;
+$fontSizeH3: 24px;
+$fontSizeH4: 18px;
+$fontSizeH5: $fontSizeBase;
+$fontSizeH6: 12px;
+
+// These are the phone resolution.
+$fontSizeMobileH1: 28px;
+$fontSizeMobileH2: 24px;
+$fontSizeMobileH3: 18px;
+$fontSizeMobileH4: 13.5px;
+$fontSizeMobileH5: 12px;
+$fontSizeMobileH6: 10px;
+
+
+// Weights 
+$fontLight: 300;
+$fontRegular: 500;
+$fontSemibold: 600;
+$fontBold: 700;
+$fontExtraBold: 800;
+
+/* Line Height */
+$lineHeightBase: 1.6;
+
+/* Letter Spacing */
+$letterSpacing: 1px;
+
+/* hr  */
+$hrHeight: 1px;
+$hrMarginTopBottom: 32px;
+$hrBackgroundColor: $colorGray;
+
+/* Drop Cap */
+$dropCapFontWeight: $fontBold;
+$dropCapFontSize: 22px;
+$dropCapLineHeight: 1;
+
+/* Global Padding (.padding class) */
+$paddingTopBottom: 80px;
+$paddingLeftRight: 48px;
+
+// Tablet Padding
+$paddingTopBottomTablet: 42px;
+$paddingLeftRightTablet: 28px;
+
+// Phone Padding
+$paddingTopBottomPhone: 24px;
+$paddingLeftRightPhone: 16px;
+
+
+/* Global Margin (below text elements and other areas) */
+$marginTopBottom: 24px;
+$marginLeftRight: 16px;
+
+
+/* Gutters (the space between flex columns, when called) */
+$gutterSizeSmall: 16px;
+$gutterSizeMedium: 24px;
+$gutterSizeLarge: 48px;
+
+/* Global shadows */
+$shadowDistance: 2px 2px 4px;
+$boxShadow: $shadowDistance fade($colorBlack, 45);
+$boxShadowDark: $shadowDistance fade($colorBlack, 75);
+
+/* Transition */
+$transitionTiming: 0.25s;
+$transitionEasing: ease;
+$transitionDelay: 0s;
+$transition: all $transitionTiming $transitionEasing $transitionDelay;
