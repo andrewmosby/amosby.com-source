@@ -14,7 +14,7 @@
 				<componentResumeCopy v-if="view === 'copy'" v-on:emitChangePage="changePage"></componentResumeCopy>
 				<componentResumeList v-if="view === 'list'"></componentResumeList>
 			</div>
-			<div class="contentEntry">
+			<div class="contentEntry printHide">
 				<p>Now that you've seen my resumé, feel free to <a @click="changePage('projects')">see some of my work</a>, read about my <a @click="changePage('philosophies')">front end values</a>, or get to know me <a @click="changePage('about')">just a little more personally</a>.</p>
 			</div>
 		</div>

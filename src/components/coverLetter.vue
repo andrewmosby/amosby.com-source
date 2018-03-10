@@ -1,5 +1,5 @@
 <template>
-	<div class="padding coverLetter">
+	<div class="padding coverLetter printHide">
 		<div>
 			<h2>{{ letter.title }}</h2>
 			<p v-html="letter.copy"></p>
