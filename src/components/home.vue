@@ -4,7 +4,7 @@
 		<div class="padding background-darkGray">
 			<div class="textAlign-center">
 				<h1>Hi, I'm Andrew Mosby.</h1>
-				<p>I am a Front End Developer with a background in design and I focus on user experience, performance, and maintainable code. I also enjoy growing teams by empowering individual contributors. I have significant experience collaborating with designers and back end developers as well as coming up with solutions with clients.</p>
+				<p>I am a Front End Developer with a background in design, and I focus on user experience, performance, and maintainable code. I also enjoy growing teams by empowering individual contributors. I have significant experience collaborating with designers and back end developers as well as coming up with solutions with clients.</p>
 				<p>One of my favorite aspects of working in web development is the open learning envirnoment we all share&mdash;we're all learning together as the web evolves. And I've been very fortunate to learn from and work with some fantastic and talented folks throughout the years.</p>
 			</div>
 			<div class="quoteWrapper">
@@ -17,7 +17,7 @@
 					<cite>Trent Sartain, Back End Developer</cite>
 				</blockquote>
 				<blockquote class="quote">
-					<p>In a fast-paced agency with tight deadlines, I love that I can hand off a desktop design to Andrew and he can make design decisions about how to handle components responsively.</p>
+					<p>In a fast-paced agency with tight deadlines, I love that I can hand off a desktop design to Andrew, and he can make design decisions about how to handle components responsively.</p>
 					<cite>Mickey Brown, Art Director</cite>
 				</blockquote>
 				<blockquote class="quote">

@@ -11,7 +11,7 @@
 				<span @click="filterCards('size', 'Minor Project')" class="itemTag">Minor Project</span>
 				<span @click="filterCards('tag', 'accessible')" class="itemTag">Accessible</span>
 				<span @click="filterCards('tag', 'performanceBudget')" class="itemTag">Performance Budget</span>
-				<span @click="filterCards('tag', 'eCommerce')" class="itemTag">eCommerce</span>
+				<span @click="filterCards('tag', 'e-commerce')" class="itemTag">e-commerce</span>
 				<span @click="filterCards('tag', 'brochure')" class="itemTag">Brochure</span>
 				<span @click="filterCards('tag', 'docs')" class="itemTag">Documentation</span>
 				<span @click="filterCards('date', '2017')" class="itemTag">2017</span>
@@ -61,10 +61,10 @@
 						url: '//www.bosma.org/',
 						imgsrc: require('./../assets/bosma.jpg'),
 						title: 'Bosma',
-						desc: 'We went through great lengths to ensure accessible content for users of bosma.org. Bosma itself both employs and informs BVI (blind and visually impaired) persons, so way beyone 508 or WCAG compliance was expected. We relied on knowledge gained from other accessible site builds to optimize for screen readers and even added keybinds for navigation (press and hold "alt" on the site to see this in action). All of this and one of my favorite facets of this site is still the use of type throughout.',
+						desc: 'We went through great lengths to ensure accessible content for users of bosma.org. Bosma itself both employs and informs BVI (blind and visually impaired) persons, so way beyond 508 or WCAG compliance was expected. We relied on knowledge gained from other accessible site builds to optimize for screen readers and even added keybinds for navigation (press and hold "alt" on the site to see this in action). All of this and one of my favorite facets of this site is still the use of type throughout.',
 						role: 'Mentor',
 						size: 'Major Project',
-						date: '2013', //October
+						date: '2016', //October
 						tag: 'accessible'
 					},
 					{
@@ -75,13 +75,13 @@
 						role: 'Lead Developer',
 						size: 'Major Project',
 						date: '2016', //January
-						tag: 'eCommerce'
+						tag: 'e-commerce'
 					},
 					{
 						url: '//www.dimweightsolutions.com/',
 						imgsrc: require('./../assets/dimweightsolutions.jpg'),
 						title: 'DIM Weight Solutions',
-						desc: 'Although this site is a small, informational brocure site, the mobile experience is optimized and the design is simple and clear. Our major accomplishment for this site was the implementation of site documentation for developers and CMS users. Just append "/docs" to the site to see them. Oh, and check out the responsive table in the docs. I am pretty proud of that one :)',
+						desc: 'Although this site is a small, informational brochure site, the mobile experience is optimized, and the design is simple and clear. Our major accomplishment for this site was the implementation of site documentation for developers and CMS users. Just append "/docs" to the site to see them. Oh, and check out the responsive table in the docs. I am pretty proud of that one :)',
 						role: 'Lead Developer',
 						size: 'Minor Project',
 						date: '2017', //January
@@ -92,7 +92,7 @@
 						url: '//envisionus.com',
 						imgsrc: require('./../assets/envisionus.jpg'),
 						title: 'Envision US',
-						desc: 'You will note many accessibility features on this site, from alt tags on every image to skippable, tabbable navagation to notifications when the screen will jump. This was our first fully accessible site and we wrote up a nice blog post about the experience, which you can find at codepen.io/team/ntara/posts',
+						desc: 'You will note many accessibility features on this site, from alt tags on every image to skipable, tabbable navagation to notifications when the screen will jump. This was our first fully accessible site and we wrote up a nice blog post about the experience, which you can find at codepen.io/team/ntara/posts',
 						role: 'Co-Developer',
 						size: 'Minor Project',
 						date: '2015', //May
@@ -102,7 +102,7 @@
 						url: '//university.envisionus.com/',
 						imgsrc: require('./../assets/envisionuniversity.jpg'),
 						title: 'Envision University',
-						desc: 'A continuing education resource for Envision US, this site utilizes many of the same accessibility features of its sister site. It also features a member login and profile for event attendees and hosts, as well as a cvent reskin for course registration.',
+						desc: 'A continuing education resource for Envision US, this site utilizes many of the same accessibility features of its sister site. It also features a member login and profile for event attendees and hosts, as well as a Cvent reskin for course registration.',
 						role: 'Mentor',
 						size: 'Minor Project',
 						date: '2015', //November
@@ -116,7 +116,7 @@
 						role: 'Lead Developer',
 						size: 'Major Project',
 						date: '2014', //January
-						tag: 'eCommerce'
+						tag: 'e-commerce'
 					},
 					{
 						url: '//www.hunterindustrialfan.com/',
@@ -136,13 +136,13 @@
 						role: 'Lead Developer',
 						size: 'Major Project',
 						date: '2013', //October
-						tag: 'eCommerce'
+						tag: 'e-commerce'
 					},
 					{
 						url: 'https://www.theouterbankshospital.com/',
 						imgsrc: require('./../assets/theouterbankshospital.jpg'),
 						title: 'Outer Banks Hospital',
-						desc: 'This site was special in that it was the first major site build for a newer front end developer on our team. I had provided teaching and encouragement up to this project and it was time for him to make the step to be the lead of a major project. There were definitely some growing pains, but ultimately finished with a good product and confidence for the next project.',
+						desc: 'This site was special in that it was the first major site build for a newer front end developer on our team. I had provided teaching and encouragement up to this project, and it was time for him to make the step to be the lead of a major project. There were definitely some growing pains, but ultimately finished with a good product and confidence for the next project.',
 						role: 'Mentor',
 						size: 'Major Project',
 						date: '2017', //March
@@ -152,7 +152,7 @@
 						url: '//www.teradata.com/',
 						imgsrc: require('./../assets/teradata.jpg'),
 						title: 'Teradata',
-						desc: 'Teradata is a multi-billion dollar corporation involved in database and storage. Their site is the most optimized in my portfolio and features vue.js on a number of pages, including the home page. The CSS is fully componentized and follows a BEM class structure. The team works under an agile methodology.',
+						desc: 'Teradata is a multi-billion dollar corporation involved in data warehousing. Their site is the most optimized in my portfolio and features vue.js on a number of pages, including the home page. The CSS is fully componentized and follows a BEM class structure. The team works under an agile methodology.',
 						role: 'Lead Developer',
 						size: 'Major Project',
 						date: '2017', //May
@@ -162,7 +162,7 @@
 						url: '//www.vidanthealth.com',
 						imgsrc: require('./../assets/vidanthealth.jpg'),
 						title: 'Vidant Health',
-						desc: 'Vidant Health is a health care organization in eastern North Carolina for whom we have done multiple site design and builds. This is their main site of over 1700 pages, which includes 20+ templates. A major consideration behind its design and front end architecture is the significant low-fi mobile connections present for its rural clients.',
+						desc: 'Vidant Health is a health care organization in eastern North Carolina for whom we have done multiple site designs and builds. This is their main site of over 1700 pages, which includes 20+ templates. A major consideration behind its design and front end architecture is the significant low-fi mobile connections present for its rural clients.',
 						role: 'Lead Developer',
 						size: 'Major Project',
 						date: '2015', //August
@@ -279,7 +279,6 @@
 		background-color: rgba(255,255,255,.1);
 		color: $colorLightGray;
 		color: white;
-		text-transform: capitalize;
 		cursor: pointer;
 		transition: $transition;
 		user-select: none;

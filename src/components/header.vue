@@ -34,7 +34,7 @@
 					},
 					{
 						pageName: 'resume',
-						text: 'Resume',
+						text: 'Résumé',
 						icon: 'content_paste'
 					},
 					{

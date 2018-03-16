@@ -16,7 +16,7 @@
 				<li>Developed front end of a multitude of responsive sites, ranging from five-page brochure sites to 1000+ page ecommerce and healthcare sites.</li>
 				<li>Architected and developed CSS framework for complex designs.</li>
 				<li>Worked closely with a team of designers and back end developers to refine user experience and functionality.</li>
-				<li>Established a system of Professional Development for other front end developers to keep each of us learning and growing well.</li>
+				<li>Established a system of professional development for other front end developers to keep each of us learning and growing well.</li>
 				<li>Created documentation and design guide that can be added to sites as their developed. This documentation also helps onboard developers and CMS users to work on the site.</li>
 			</ul>
 			<p class="hasOverline">
