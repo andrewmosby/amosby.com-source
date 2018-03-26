@@ -25,7 +25,7 @@
 					{
 						pageName: 'home',
 						text: 'Home',
-						icon: 'polymer'
+						icon: 'home'
 					},
 					{
 						pageName: 'projects',
@@ -35,7 +35,7 @@
 					{
 						pageName: 'resume',
 						text: 'Résumé',
-						icon: 'content_paste'
+						icon: 'work'
 					},
 					{
 						pageName: 'philosophies',
@@ -45,7 +45,7 @@
 					{
 						pageName: 'about',
 						text: 'About',
-						icon: 'person_outline'
+						icon: 'person'
 					}
 				],
 				headerStory: {
@@ -85,12 +85,26 @@
 		overflow: hidden;
 	    z-index: 100;
 
-		&:hover {
+    	&:hover {
 			width: 140px;
 			.header_nav_text {
 				display: block;
 			}
 		}
+	}
+	@media (hover: none) { 
+		.header {
+			width: 140px;
+			.header_nav_text {
+				display: block;
+			}
+		}
+		@media (min-width: $tabletMin) {
+			main {
+				padding-left: 188px; //header width + padding-left of main
+			}
+		}
+
 	}
 	.header_nav_link {
 		display: flex;

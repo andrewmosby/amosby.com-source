@@ -10,10 +10,12 @@
 				<span @click="filterCards('size', 'Major Project')" class="itemTag">Major Project</span>
 				<span @click="filterCards('size', 'Minor Project')" class="itemTag">Minor Project</span>
 				<span @click="filterCards('tag', 'accessible')" class="itemTag">Accessible</span>
+				<span @click="filterCards('tag', 'vue.js')" class="itemTag">vue.js</span>
 				<span @click="filterCards('tag', 'performanceBudget')" class="itemTag">Performance Budget</span>
 				<span @click="filterCards('tag', 'e-commerce')" class="itemTag">e-commerce</span>
 				<span @click="filterCards('tag', 'brochure')" class="itemTag">Brochure</span>
 				<span @click="filterCards('tag', 'docs')" class="itemTag">Documentation</span>
+				<span @click="filterCards('date', '2018')" class="itemTag">2018</span>
 				<span @click="filterCards('date', '2017')" class="itemTag">2017</span>
 				<span @click="filterCards('date', '2016')" class="itemTag">2016</span>
 				<span @click="filterCards('date', '2015')" class="itemTag">2015</span>
@@ -48,7 +50,7 @@
 				//itemColor: 'all',
 				cards: [
 					{
-						url: '//beautyrest.com',
+						url: 'https://www.beautyrest.com/',
 						imgsrc: require('./../assets/beautyrest.jpg'),
 						title: 'Beautyrest',
 						desc: 'This site has changed a lot since launch in early 2016. Yet, the major challenge remains the same: the main CTA for the site is "Find a Store," as the sales model is fixed in brick-and-mortar stores. The site is responsive with multiple color palette changes based on the product line. The footer is persistent and the CSS and JS animations are sprinkled throughout the site.',
@@ -58,7 +60,7 @@
 						tag: 'brochure'
 					},
 					{
-						url: '//www.bosma.org/',
+						url: 'https://www.bosma.org/',
 						imgsrc: require('./../assets/bosma.jpg'),
 						title: 'Bosma',
 						desc: 'We went through great lengths to ensure accessible content for users of bosma.org. Bosma itself both employs and informs BVI (blind and visually impaired) persons, so way beyond 508 or WCAG compliance was expected. We relied on knowledge gained from other accessible site builds to optimize for screen readers and even added keybinds for navigation (press and hold "alt" on the site to see this in action). All of this and one of my favorite facets of this site is still the use of type throughout.',
@@ -68,7 +70,17 @@
 						tag: 'accessible'
 					},
 					{
-						url: '//www.hunterfan.com/casablanca',
+						url: 'https://www.cardinalinnovations.org/',
+						imgsrc: require('./../assets/cardinalinnovations.jpg'),
+						title: 'Cardinal Health',
+						desc: 'I went through great lengths to blur the line between front end and back end development on this project. I used vue.js to build components and lay out the page view logic in order to set up back end to pull in data to fill in the view. We used vue router in order to make each section of the site load incredibly quickly (in development). The prodcution version of the site is the "MVP" version, with the full-featured version in development, slated to release in late May.',
+						role: 'Lead Developer',
+						size: 'Major Project',
+						date: '2018',
+						tag: 'vue.js'
+					},
+					{
+						url: 'https://www.hunterfan.com/casablanca',
 						imgsrc: require('./../assets/casablancafanco.jpg'),
 						title: 'Casablanca Fan Co',
 						desc: 'This project was one of those in which requirements kept changing during development, so keeping up with a consistent code base was a challenge. Yet, the site remains a beautiful testament to the level of design that can be accomplished on a high-end e-commerce site. EDIT: the client has very recently changed agencies and the site is no longer active.',
@@ -78,7 +90,7 @@
 						tag: 'e-commerce'
 					},
 					{
-						url: '//www.dimweightsolutions.com/',
+						url: 'https://www.dimweightsolutions.com/',
 						imgsrc: require('./../assets/dimweightsolutions.jpg'),
 						title: 'DIM Weight Solutions',
 						desc: 'Although this site is a small, informational brochure site, the mobile experience is optimized, and the design is simple and clear. Our major accomplishment for this site was the implementation of site documentation for developers and CMS users. Just append "/docs" to the site to see them. Oh, and check out the responsive table in the docs. I am pretty proud of that one :)',
@@ -89,7 +101,7 @@
 						// Note the docs
 					},
 					{
-						url: '//envisionus.com',
+						url: 'https://www.envisionus.com/',
 						imgsrc: require('./../assets/envisionus.jpg'),
 						title: 'Envision US',
 						desc: 'You will note many accessibility features on this site, from alt tags on every image to skipable, tabbable navagation to notifications when the screen will jump. This was our first fully accessible site and we wrote up a nice blog post about the experience, which you can find at codepen.io/team/ntara/posts',
@@ -99,7 +111,7 @@
 						tag: 'accessible'
 					},
 					{
-						url: '//university.envisionus.com/',
+						url: 'https://university.envisionus.com/',
 						imgsrc: require('./../assets/envisionuniversity.jpg'),
 						title: 'Envision University',
 						desc: 'A continuing education resource for Envision US, this site utilizes many of the same accessibility features of its sister site. It also features a member login and profile for event attendees and hosts, as well as a Cvent reskin for course registration.',
@@ -109,7 +121,7 @@
 						tag: 'accessible'
 					},
 					{
-						url: '//www.hunterfan.com',
+						url: 'https://www.hunterfan.com/',
 						imgsrc: require('./../assets/hunterfan.jpg'),
 						title: 'Hunter Fan',
 						desc: 'This site is no longer under my control and does not reflect my code or styles. But, its original design funneled users to fans based on the style, personality, or space of the user.',
@@ -119,7 +131,7 @@
 						tag: 'e-commerce'
 					},
 					{
-						url: '//www.hunterindustrialfan.com/',
+						url: 'https://www.hunterindustrialfan.com/',
 						imgsrc: require('./../assets/hunterindustrialfan.jpg'),
 						title: 'Hunter Industrial Fan',
 						desc: "This site aims to inform and generate sales leads for Hunter Fan's line of industrial-size ceiling fans (think Big Ass Fans, their biggest competitor). The mobile experience is optimized and was built modularly with an 'everything first' mindset.",
@@ -129,7 +141,7 @@
 						tag: 'brochure'
 					},
 					{
-						url: '//www.mastgeneralstore.com/',
+						url: 'http://www.mastgeneralstore.com/',
 						imgsrc: require('./../assets/mastgeneralstore.jpg'),
 						title: 'Mast General Store',
 						desc: "Mast remains one of my favorite projects, as it was my first responsive site, which really set a benchmark for my learning experiences. There are a number of small touches that really cause the site to stand out (note the swatches on product cards and detail pages). It is also unfortunately out of my control today, so I have to sit by and watch 10 slides get loaded to the home page carousel :(",
@@ -149,7 +161,7 @@
 						tag: 'brochure'
 					},
 					{
-						url: '//www.teradata.com/',
+						url: 'https://www.teradata.com/',
 						imgsrc: require('./../assets/teradata.jpg'),
 						title: 'Teradata',
 						desc: 'Teradata is a multi-billion dollar corporation involved in data warehousing. Their site is the most optimized in my portfolio and features vue.js on a number of pages, including the home page. The CSS is fully componentized and follows a BEM class structure. The team works under an agile methodology.',
@@ -159,7 +171,7 @@
 						tag: 'performanceBudget'
 					},
 					{
-						url: '//www.vidanthealth.com',
+						url: 'https://www.vidanthealth.com/',
 						imgsrc: require('./../assets/vidanthealth.jpg'),
 						title: 'Vidant Health',
 						desc: 'Vidant Health is a health care organization in eastern North Carolina for whom we have done multiple site designs and builds. This is their main site of over 1700 pages, which includes 20+ templates. A major consideration behind its design and front end architecture is the significant low-fi mobile connections present for its rural clients.',
@@ -179,7 +191,7 @@
 					// 	tag: 'brochure'
 					// },
 					{
-						url: '//careers.vidanthealth.com/',
+						url: 'http://careers.vidanthealth.com/',
 						imgsrc: require('./../assets/vidanthealthcareers.jpg'),
 						title: 'Vidant Health Careers',
 						desc: 'This site is designed to provide prospective job applicants with information about the company and the area. Most pages are informational, but a major focus of the site is the integration with a third-party job application portal. It was built on an early version of our CSS framework.',
@@ -189,7 +201,7 @@
 						tag: 'brochure'
 					},
 					{
-						url: '//foundation.vidanthealth.com/',
+						url: 'https://foundation.vidanthealth.com/',
 						imgsrc: require('./../assets/vidanthealthfoundation.jpg'),
 						title: 'Vidant Health Foundation',
 						desc: 'As a non-profit organization, Vidant needed a site to promote its foundation for giving purposes. This site funnels users to major giving campaigns via inspirational content. The front end was built on an early version of our CSS framework.',

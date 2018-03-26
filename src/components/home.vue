@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<!-- Until I find an image <img class="banner"  v-bind:src="bannerImg"> -->
+		<img class="banner"  v-bind:src="bannerImg">
 		<div class="padding background-darkGray">
 			<div class="textAlign-center">
 				<h1>Hi, I'm Andrew Mosby.</h1>
@@ -40,7 +40,7 @@
 				See my work
 			</a>
 			<a @click="changePage('resume')" class="iconGrid_link">
-				<i class="icon-material iconGrid_icon">content_paste</i>
+				<i class="icon-material iconGrid_icon">work</i>
 				View my resume
 			</a>
 			<span class="iconGrid_link"></span>
@@ -50,7 +50,7 @@
 				Read my thoughts
 			</a>
 			<a @click="changePage('about')" class="iconGrid_link">
-				<i class="icon-material iconGrid_icon">person_outline</i>
+				<i class="icon-material iconGrid_icon">person</i>
 				Get to know me
 			</a>
 			<span class="iconGrid_link"></span>
@@ -85,7 +85,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
 		grid-gap: 0;
-		background: url(./../assets/iconGrid-background.jpg) no-repeat;
+		background: url(./../assets/iconGrid-background.jpg) no-repeat center;
 		background-size: cover;
 		padding: 0;
 	}
