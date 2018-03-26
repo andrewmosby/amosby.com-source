@@ -3,6 +3,7 @@
 		<div class="column-large column-centered">
 			<h1>Projects</h1>
 			<componentCard></componentCard>
+			<p class="footnote">All projects shown were developed while employed by <a href="https://www.ntara.com/" target="_blank">Ntara</a>, a digital agency in Johnson City, Tennessee.</p>
 		</div>
 	</div>
 </template>
@@ -18,7 +19,7 @@
 </script>
 
 <style scoped lang="scss">
-	main {
-		
+	.footnote {
+		margin-top: 24px;
 	}
 </style>
